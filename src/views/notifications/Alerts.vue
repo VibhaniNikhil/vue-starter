@@ -119,7 +119,8 @@
                        variant="warning"
                        @dismissed="dismissCountdown=0"
                        @dismiss-count-down="countDownChanged">
-                Alert will dismiss after <strong>{{dismissCountDown}}</strong> seconds...
+                       Alert will dismiss after 
+                       <strong>{{dismissCountDown}}</strong> seconds...
               </b-alert>
               <b-alert :show="dismissCountDown"
                        dismissible

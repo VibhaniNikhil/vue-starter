@@ -11,6 +11,12 @@ import App from './App';
 import router from './router';
 import store from '@/store';
 import VeeValidate from 'vee-validate';
+import NProgress from 'nprogress'; // progress bar
+import VueMaterial from 'vue-material';
+import 'vue-material/dist/vue-material.min.css';
+import 'nprogress/nprogress.css'; // progress bar style
+
+NProgress.configure({ showSpinner: false }); // NProgress Configuration
 
 Vue.use(VeeValidate, {
   // This is the default
@@ -19,8 +25,9 @@ Vue.use(VeeValidate, {
   fieldsBagName: 'veeFields',
 });
 
+Vue.use(VueMaterial);
 
-store.dispatch("setCurrent", localStorage.user && JSON.parse(localStorage.user)?JSON.parse(localStorage.user):{})
+store.dispatch('setCurrent', localStorage.user && JSON.parse(localStorage.user) ? JSON.parse(localStorage.user) : {});
 
 Vue.use(BootstrapVue);
 

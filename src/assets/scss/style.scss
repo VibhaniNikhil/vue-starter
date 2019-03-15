@@ -1,11 +1,50 @@
 // If you want to override variables do it here
-@import "variables";
+@import 'variables';
 
 // Import styles
-@import "~@coreui/coreui/scss/coreui";
+@import '~@coreui/coreui/scss/coreui';
 
 // If you want to add something do it here
-@import "custom";
+@import 'custom';
 
 // ie fixes
-@import "ie-fix";
+@import 'ie-fix';
+
+// .row {
+//     display: block !important;
+// }
+
+.table th, .table td {
+    padding: 0.50rem !important;
+}
+
+.VuePagination {
+  display: block;
+}
+
+.pagination {
+  float: right;
+}
+
+.VuePagination__count {
+  float: unset;
+  position: relative;
+}
+
+.VueTables__search-field {
+  display: inherit;
+}
+
+.VueTables__limit-field {
+  display: inherit;
+}
+
+.VueTables__search-field input {
+  position: relative;
+  left: 15px;
+}
+
+.VueTables__limit-field label {
+  position: relative;
+  right: 16px;
+}
