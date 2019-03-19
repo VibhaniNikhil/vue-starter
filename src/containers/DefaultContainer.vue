@@ -5,7 +5,8 @@
       <b-link class="navbar-brand" to="#">
         <!-- <img class="navbar-brand-full" src="img/brand/logo.png" width="89" height="25" alt="CoreUI Logo">
         <img class="navbar-brand-minimized" src="img/brand/logo.png" width="30" height="30" alt="CoreUI Logo">-->
-        <span class="lead font-weight-light">OneSkool
+        <span class="lead font-weight-light">
+          OneSkool
           <sup>alpha</sup>
         </span>
       </b-link>
@@ -17,10 +18,10 @@
         </b-nav-item>
         <!-- <b-nav-item class="d-md-down-none">
           <i class="icon-list"></i>
-        </b-nav-item> -->
+        </b-nav-item>-->
         <!-- <b-nav-item class="d-md-down-none">
           <i class="icon-location-pin"></i>
-        </b-nav-item> -->
+        </b-nav-item>-->
         <DefaultHeaderDropdownAccnt/>
       </b-navbar-nav>
       <!-- <AsideToggler class="d-none d-lg-block"/> -->
@@ -48,7 +49,7 @@
     <TheFooter>
       <!--footer-->
       <div>
-        <a href="https://coreui.io">OneSkool</a>
+        <a href="/#/dashboard">OneSkool</a>
         <span class="ml-1">&copy; {{date}}</span>
       </div>
     </TheFooter>
@@ -98,13 +99,10 @@ export default {
       date: new Date().getFullYear()
     };
   },
-  created: function() {
-    // this.$router.push('pages/404')
-  },
+  created: function() {},
   computed: {
     name() {
       return this.$route.name;
-      // /pages/login
     },
     list() {
       return this.$route.matched.filter(

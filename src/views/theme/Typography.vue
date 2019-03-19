@@ -56,7 +56,7 @@
     </div>
     <div class="card">
       <div class="card-header">
-        Headings
+        Headings        
       </div>
       <div class="card-body">
         <p><code class="highlighter-rouge">.h1</code> through <code class="highlighter-rouge">.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>

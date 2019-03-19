@@ -7,20 +7,20 @@
 </template>
 
 <script>
-import ColorView from './ColorView'
+import ColorView from "./ColorView";
 export default {
-  name: 'ColorTheme',
+  name: "ColorTheme",
   components: { ColorView },
   props: {
     classObj: {
       type: String,
-      default: 'theme-color w-75 rounded mb-3'
+      default: "theme-color w-75 rounded mb-3"
     },
     color: {
       type: String,
-      default: 'bg-secondary'
+      default: "bg-secondary"
     }
   }
-}
+};
 </script>
 

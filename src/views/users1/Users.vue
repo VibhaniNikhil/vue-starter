@@ -90,7 +90,7 @@ export default {
   },
   computed: {},
   methods: {
-    getBadge(status) {
+    getBadge(status) {      
       return status === "Active"
         ? "success"
         : status === "Inactive"

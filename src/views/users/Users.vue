@@ -42,8 +42,11 @@ import Vue from "vue";
 import { ServerTable } from "vue-tables-2";
 import NProgress from "nprogress";
 import axios from "axios";
+import { Promise } from "q";
+import { resolve } from "url";
 
 Vue.use(ServerTable);
+Vue.use(NProgress);
 
 export default {
   name: "Users",
@@ -74,7 +77,9 @@ export default {
                 count: 100
               };
             });
-        }
+        },
+        saveState: true,
+        storage: localStorage
       }
     };
   },
@@ -87,6 +92,7 @@ export default {
     onClickToConfirmDelete() {
       if (this.deletedId) {
         // this.$refs.table.data.splice(this.deletedId, 1);
+        this.$refs.table.refresh();
       }
       this.deletedId = null;
     },

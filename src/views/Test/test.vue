@@ -68,7 +68,7 @@ export default {
                 count: 100
               };
             });
-        },
+        },        
         templates: {
           action: function(h, row, index) {
             return (

@@ -4,17 +4,18 @@ export default {
   },
   getters: {
     userList(state) {
+      // console.log("state",state);
       return state.userList;
     },
   },
   mutations: {
     onAddUser(state, payload) {
-      console.log('payload', payload);
+      // console.log("state, payload", state, payload)
     },
   },
   actions: {
-    addUser(context, data) {
-      console.log('data', data);
+    addUser(context, data) {      
+      // console.log("context, data", context, data);
       context.commit('onAddUser', data);
     },
   },

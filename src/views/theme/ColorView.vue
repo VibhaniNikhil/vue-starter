@@ -1,42 +1,46 @@
 <template>
   <table class="w-100">
     <tbody>
-    <tr>
-      <td class="text-muted">HEX:</td>
-      <td class="font-weight-bold">{{this.hexColor}}</td>
-    </tr>
-    <tr>
-      <td class="text-muted">RGB:</td>
-      <td class="font-weight-bold">{{this.bgColor}}</td>
-    </tr>
+      <tr>
+        <td class="text-muted">HEX:</td>
+        <td class="font-weight-bold">{{this.hexColor}}</td>
+      </tr>
+      <tr>
+        <td class="text-muted">RGB:</td>
+        <td class="font-weight-bold">{{this.bgColor}}</td>
+      </tr>
     </tbody>
   </table>
 </template>
 
 <script>
-import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities'
+import { rgbToHex } from "@coreui/coreui/dist/js/coreui-utilities";
 export default {
-  name: 'ColorView',
-  data: function () {
+  name: "ColorView",
+  data: function() {
     return {
-      bgColor: 'rgb(255, 255, 255)'
-    }
+      bgColor: "rgb(255, 255, 255)"
+    };
   },
   computed: {
-    hexColor () {
-      return rgbToHex(this.bgColor)
+    hexColor() {
+      return rgbToHex(this.bgColor);
+    },
+    hexDefaultColor() {
+      return rgbToHex("rgb(211, 211, 222)");
     }
   },
   methods: {
-    setColor () {
-      const elem = this.$parent.$el.children[0]
-      const color = window.getComputedStyle(elem).getPropertyValue('background-color')
-      this.bgColor = color || this.bgColor
+    setColor() {
+      const elem = this.$parent.$el.children[0];
+      const color = window
+        .getComputedStyle(elem)
+        .getPropertyValue("background-color");
+      this.bgColor = color || this.bgColor;
     }
   },
-  mounted () {
-    this.setColor()
+  mounted() {
+    this.setColor();
   }
-}
+};
 </script>
-

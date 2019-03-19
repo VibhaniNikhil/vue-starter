@@ -16,7 +16,7 @@ export default {
         data: [65, 59, 84, 84, 51, 55, 40]
       }
     ]
-
+    
     this.renderChart(
       {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
